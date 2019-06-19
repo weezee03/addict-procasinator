@@ -1,85 +1,57 @@
-.page > p:first-of-type {
-  color: #7E8184;
-  font-style: italic;
+/*
+dont expect the CSS to be perfect or even totslly right i feel there will be a lot
+of mistakes and you might even find it a mess.
+*/
+* {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 1.2em;  /* not sure why this is not working*/
+  border-color: "solid black"
 }
+#container {
+  content: justify;
+  line-height: 1.6;
+  font-family: serif;
+  font-size: 1.3em;
 
-.synopsis em {
-  font-style: normal;
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  grid-template-columns: 1fr, 90% , 1fr;
+  grid-template-rows: auto;
+  grid-gap: 1rem;
+  grid-template-areas:
+    "nav main_content right_bio";
 }
+.main_content {
+   margin: 0 auto;
+   width: 60%;
+   max-width: 600%;
+   margin-top: 20%;
 
-/* h1 em {
-	font-style: bold;
-} */
-
-.button:link,
-.button:visited {
-  display: block;
-  text-decoration: none;
-  color: #FFF;
-  background-color: #5995DA;    /* Blue */
-  font-weight: bold;
-  padding: 20px;
+   grid-area: main_content;
+}
+h1 {
   text-align: center;
-  border: 2px solid #5D6063;    /* Dark gray */
-  border-radius: 5px;
-
-  width: 200px;
-  margin: 20px auto;
+/*  margin-left: 30rem;  with this the centering is happening but the whole thing moves*/
+ }
+.nav {
+  margin-left: 10%;
+  grid-area: nav;
+  background-color: grey;
 }
-.button:hover,
-.button:visited:hover {
-  color: #FFF;
-  background-color: #76AEED;  /* Light blue */
+.right_bio{
+  grid-area: right_bio;
+  margin-top: 20%;
+  margin-left: 0;
 }
-.button:active,
-.button:visited:active {
-  color: #FFF;
-  background-color: #5995DA;  /* Blue */
+img{
+  width: 10em;
+  height: auto;
 }
-#button-2 {
-  color: #5D6063;  /* Dark gray */
+body{
+  background-image: image(img/HP_castle.jpeg);  /*i was trying to put a banner with this
+  so ignore*/
 }
-.call-to-action:link,
-.call-to-action:visited {
-  font-style: italic;
-  background-color: #EEB75A;     /* Yellow */
-}
-
-.call-to-action:hover,
-.call-to-action:visited:hover {
-  background-color: #F5CF8E;     /* Light yellow */
-}
-
-.call-to-action:active,
-.call-to-action:visited:active {
-  background-color: #EEB75A;     /* Yellow */
-}
-
-.page {
-  width: 600px;
-  margin: 0 auto;
-}
-
-a:link {
-  color: blue;
-  text-decoration: none;
-}
-a:visited {
-  color: purple;
-}
-a:hover {
-  color: aqua;
-  text-decoration: underline;
-}
-a:active {
-  color: red;
-}
-a:visited:hover {
-  color: orange;
-}
-a:visited:active {
-  color: red;
-}
-p:last-of-type {
-  margin-bottom: 50px;
-}
+/*even thought i was trying to copy the thing it doesnt look like its suppose to.*/
