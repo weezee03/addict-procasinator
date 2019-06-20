@@ -6,8 +6,6 @@ of mistakes and you might even find it a mess.
   margin:0;
   padding: 0;
   box-sizing: border-box;
-  border: 1.2em;  /* not sure why this is not working*/
-  border-color: "solid black"
 }
 #container {
   content: justify;
@@ -56,7 +54,7 @@ img{
   height: auto;
 }
 body{
-  background-image: url("img/HP_castle.jpg");  /*i was trying to put a banner with this
-  so ignore*/
+  background-image: url("../img/HP_castle.jpg");
+  background-size: cover;
 }
 /*even thought i was trying to copy the thing it doesnt look like its suppose to.*/
