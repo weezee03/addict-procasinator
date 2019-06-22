@@ -6,6 +6,14 @@ of mistakes and you might even find it a mess.
     font-family: harry-p;
     src:url("fonts/HARRYP__.TTF");
 }
+@font-face {
+  font-family: Cinzel;
+  src:url("fonts/Cinzel-Regular.tff");
+}
+@font-face {
+  font-family: Alegreya;
+  src: url("fonts/Alegreya-Regular.tff");
+}
 
 * {
   margin:0;
@@ -15,7 +23,7 @@ of mistakes and you might even find it a mess.
 #container {
   content: justify;
   line-height: 1.6;
-  font-family: serif;
+/*  font-family: serif; */
   font-size: 1.3em;
 
   display: grid;
@@ -30,6 +38,9 @@ of mistakes and you might even find it a mess.
    margin: 0 auto;
    margin-top: 10%;
    grid-area: main_content;
+}
+.main_content p{
+  font-family: Alegreya;
 }
 .main-header {
   text-align: center;
@@ -77,6 +88,7 @@ of mistakes and you might even find it a mess.
   grid-area: right_bio;
   margin-top: 10%;
   margin-left: 0;
+  font-family: Cinzel;
 }
 img{
   width: 100%;
