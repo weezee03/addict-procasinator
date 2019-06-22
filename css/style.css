@@ -8,22 +8,31 @@ of mistakes and you might even find it a mess.
 }
 @font-face {
   font-family: Cinzel;
-  src:url("fonts/Cinzel-Regular.tff");
+  src:url("fonts/Cinzel-Regular.ttf");
 }
 @font-face {
   font-family: Alegreya;
-  src: url("fonts/Alegreya-Regular.tff");
+  src: url("fonts/Alegreya-Regular.ttf");
 }
+/* You had done some spelling mistakes above. I have corrected it.
+    Your fonts where not working due to the spelling mistakes.
+ */
 
 * {
   margin:0;
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  line-height: 1.8;
+}
+
+ul li {
+    list-style-type: none;
+}
 #container {
   content: justify;
-  line-height: 1.6;
-/*  font-family: serif; */
   font-size: 1.3em;
 
   display: grid;
@@ -39,8 +48,14 @@ of mistakes and you might even find it a mess.
    margin-top: 10%;
    grid-area: main_content;
 }
+
+.main_content h2 {
+    font-family: Alegreya;
+    font-size: 4rem;
+}
 .main_content p{
   font-family: Alegreya;
+  font-size: 1.4rem;
 }
 .main-header {
   text-align: center;
@@ -88,7 +103,13 @@ of mistakes and you might even find it a mess.
   grid-area: right_bio;
   margin-top: 10%;
   margin-left: 0;
+  padding: 0.5em;
   font-family: Cinzel;
+  font-size: 0.8em;
+}
+
+.right_bio ul li {
+    margin-top: 0.5em;
 }
 img{
   width: 100%;
