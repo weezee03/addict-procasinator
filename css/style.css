@@ -3,7 +3,7 @@ dont expect the CSS to be perfect or even totslly right i feel there will be a l
 of mistakes and you might even find it a mess.
 */
 @font-face {
-    font-family: harry-p;
+    font-family: harry;
     src:url("fonts/HARRYP__.TTF");
 }
 @font-face {
@@ -14,9 +14,6 @@ of mistakes and you might even find it a mess.
   font-family: Alegreya;
   src: url("fonts/Alegreya-Regular.ttf");
 }
-/* You had done some spelling mistakes above. I have corrected it.
-    Your fonts where not working due to the spelling mistakes.
- */
 
 * {
   margin:0;
@@ -40,12 +37,13 @@ ul li {
   grid-template-rows: auto;
   grid-gap: 2rem;
   grid-template-areas:
+    "nav nav nav" /* made a change here */
   	"header header header"
-    "nav main_content right_bio"
+    "main_content main_content right_bio"
 }
 .main_content {
    margin: 0 auto;
-   margin-top: 10%;
+   /* margin-top: 10%; */
    grid-area: main_content;
 }
 
@@ -70,35 +68,33 @@ ul li {
  }
 
  .main-header h1 {
-     font-family: harry-p;
+     font-family: harry;
      font-size: 10em;
      color: black;
      text-shadow: 3px 4px 1px white;
  }
-.nav {
-  margin-left: 10%;
-  grid-area: nav;
-  background-color: black;
-  padding: 2rem;
+/* Changes are done here below */
+aside {
+    grid-area: nav;
+    position: sticky;
+    top: 0;
+    left: 0;
 }
 
 .nav ul {
-  list-style-type: none;
-}
-
-.nav ul li {
-    border-bottom: 1px solid white;
-    margin-top: 0.5em;
+  background-color: black;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .nav a {
-	text-decoration: none;
-	color: white;
+    text-decoration: none;
+    color: white;
 }
+/* Changes end above. */
 
-.nav a:hover {
-    color: yellow;
-}
 .right_bio{
   grid-area: right_bio;
   margin-top: 10%;
