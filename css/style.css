@@ -33,39 +33,15 @@ ul li {
   font-size: 1.3em;
 
   display: grid;
-  grid-template-columns: 5fr 1fr;
+  grid-template-columns:5fr 1fr;
   grid-template-rows: auto;
   grid-gap: 2rem;
   grid-template-areas:
-<<<<<<< HEAD
-    "nav nav nav" /* made a change here */
-  	"header header header"
-    "main_content main_content right_bio"
-}
-.main_content {
-   margin: 0 auto;
-   /* margin-top: 10%; */
-=======
+    "nav nav" /* made a change here */
   	"header header"
-    "nav nav"
     "main_content right_bio";
 }
-.main_content {
-   margin: 0 auto;
-   margin-top: 10%;
-   margin-left: 10rem;
->>>>>>> 6f5ebb5f718f2caf99de56e63d12d30df5fe1f9f
-   grid-area: main_content;
-}
 
-.main_content h2 {
-    font-family: Alegreya;
-    font-size: 4rem;
-}
-.main_content p{
-  font-family: Alegreya;
-  font-size: 1.4rem;
-}
 .main-header {
   text-align: center;
   grid-area: header;
@@ -84,72 +60,3 @@ ul li {
      color: black;
      text-shadow: 3px 4px 1px white;
  }
-<<<<<<< HEAD
-/* Changes are done here below */
-aside {
-    grid-area: nav;
-    position: sticky;
-    top: 0;
-    left: 0;
-}
-
-.nav ul {
-  background-color: black;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-=======
-
-.nav {
-  margin-left: 10%;
-  grid-area: nav;
-  background-color: grey;
-  padding: 2rem 30rem;
-}
-
-.nav ul {
-  list-style-type: none;
-}
-
-.nav  {
-    border-bottom: 1px solid white;
-    margin-top: 0.5em;
->>>>>>> 6f5ebb5f718f2caf99de56e63d12d30df5fe1f9f
-}
-
-.nav a {
-    text-decoration: none;
-    color: white;
-}
-/* Changes end above. */
-
-.right_bio{
-  grid-area: right_bio;
-  margin-top: 10%;
-  margin-left: 0;
-  padding: 0.5em;
-  font-family: Cinzel;
-  font-size: 0.8em;
-}
-
-.right_bio ul li {
-    margin-top: 0.5em;
-}
-img{
-  width: 100%;
-  height: auto;
-}
-table {
-  border-spacing: 1rem;
-}
-.nav {
-  display: flex;
-  justify-content: space-around;
-  border: 1px solid #fff;
-  width: 900px;
-  margin-left: 2rem;
-  text-align: center;
-  flex-wrap: wrap;
-  position: sticky;
-}
