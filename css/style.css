@@ -20,31 +20,16 @@ of mistakes and you might even find it a mess.
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  font-size: 62.5%;
+}
 
 body {
   line-height: 1.8;
 }
 
-ul li {
-    list-style-type: none;
-}
-#container {
-  content: justify;
-  font-size: 1.3em;
-
-  display: grid;
-  grid-template-columns:5fr 1fr;
-  grid-template-rows: auto;
-  grid-gap: 2rem;
-  grid-template-areas:
-    "nav nav" /* made a change here */
-  	"header header"
-    "main_content right_bio";
-}
-
 .main-header {
   text-align: center;
-  grid-area: header;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -56,7 +41,126 @@ ul li {
 
  .main-header h1 {
      font-family: harry;
-     font-size: 10em;
+     font-size: 20rem;
      color: black;
      text-shadow: 3px 4px 1px white;
  }
+
+/*
+  MAIN NAVIGATION
+*/
+aside {
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.navigation {
+  padding: 1rem;
+  font-family: sans-serif;
+  background-color: black;
+  color: white;
+  
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.navigation div {
+  padding-right: 0.5rem;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: white;
+}
+
+/* 
+NAVIGATION ENDS ABOVE
+*/
+
+
+/*
+CONTAINER BEGINS HERE
+*/
+
+#container {
+  display: grid;
+  gird-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "main-content suppliment";
+}
+
+.main_content {
+  grid-area: main-content;
+  font-family: Cinzel;
+  font-size: 2rem;
+  padding: 2em;
+}
+
+.right_bio {
+  grid-area: suppliment;
+  font-family: Alegreya;
+  font-size: 1rem;
+  padding: 1em;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .main-header {
+    height: 50vh;
+  }
+  
+  .main-header h1{
+    font-size: 8rem;
+  }
+  #container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .main_content {
+    font-size: 1.6rem;
+    padding: 0;
+    margin: 0.5em;
+  }
+  
+  .right_bio {
+    font-size: 1rem;
+    padding: 0;
+    margin: 0.5em;
+  }
+  
+  .right_bio img{
+    width: 100%;
+  }
+  
+  p {
+    margin-top: 2em;
+  }
+  
+} 
+/* 
+Okay how do you feel of this design? its good enough.
+Yes it is good enough but the side table is kind of annoying.
+It is taking the whole right column but whatever.
+I want to show you something right now.
+Is the display of this project in a new tab? yes.
+right click and on that select "Inspect Element"
+right click on the display oka
+now do you see a developer tools popped up below? yes.
+to the top right of developers tools you will see an icon of mobile
+if you hover over it you will see Responsive Design Mode yes
+Our website doesn't look good on mobile.
+Lets start to add a media query. ok. 
+order also i guess.
+Yes I have changed the order. I have sent the right column to the buttom.
+and the main introduction to the top.
+We just have to fix font-size
+Yes we must have a fix font-size for an HTML element which is 62.5%;
+but then we can change the font-size using media queries based 
+on the device we are targeting.
+For mobile you have to change the font size to something lower
+ok. 
+*/
