@@ -86,7 +86,7 @@ CONTAINER BEGINS HERE
 
 #container {
   display: grid;
-  gird-template-columns: 1fr 1fr;
+  grid-template-columns: 3fr 1fr;
   grid-template-rows: auto;
   grid-template-areas:
     "main-content suppliment";
@@ -108,6 +108,11 @@ CONTAINER BEGINS HERE
 .grey_font{
   color: grey;
 }
+
+.publication_images{
+    grid-area: suppliment;
+}
+
 /* Responsive web*/
 @media only screen and (max-width: 600px) {
   .main-header {
@@ -144,16 +149,3 @@ CONTAINER BEGINS HERE
 
 }
 /* container ends*/
-
-/*img setting starts*/
-.img1{
-  width: 25em;
-  height: auto;
-  float: right;
-  padding-left: 3em;
-  padding-bottom: 1em;
-}
-.img2{
-  float: right; /* not working img from publication_history*/
-}
-/*img setting ends*/
